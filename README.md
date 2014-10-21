@@ -17,7 +17,7 @@ Assume you want to share a folder called `files`
 - edit the `.htaccess` file. And replace all `($folder)` with `files`.
   *ex. `HeaderName /($folder)/.theme/header.html` should become `HeaderName /files/.theme/header.html`*
 
-- Share you folder!
+- Share your folder!
 
 ### Global installation
 You can also use the modification system wide by cloning or extracting this repository where ever you like and then place the `mod_autoindex.conf` in `/etc/apache2/other`.
