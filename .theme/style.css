@@ -139,11 +139,12 @@ a[href$="/"]:hover,a[href$="/"]:hover,a.link--breadcrumb:hover {
 .indexhead .indexcollastmod,
 .indexhead .indexcolsize {
     opacity: 1;
+    font-size: 1em;
 }
 
 .indexcollastmod, .indexcolsize {
     opacity: .4;
-
+    font-size: 0.8em;
     transition: opacity 200ms ease-in;
     -webkit-transition: opacity 200ms ease-in;
     -moz-transition: opacity 200ms ease-in;
@@ -177,6 +178,7 @@ a[href$="/"]:hover,a[href$="/"]:hover,a.link--breadcrumb:hover {
     background: url('/~meodai/.meta/icons/folder_open@2x.png');
     background-size: 100%;
 }
+
 /* footer */
 .footer {
     padding: 1em 0 0;
