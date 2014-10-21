@@ -20,7 +20,8 @@ Assume you want to share a folder called `files`
 ## Customize
 Feel free to edit all the files. In order to style the project differently. Edit `.theme/style.css`
 
-On OSX you can get your Sites folder back using this [tutorial](http://coolestguidesontheplanet.com/get-apache-mysql-php-phpmyadmin-working-osx-10-10-yosemite/)
+On OSX 10.9 and 10.10 you can get your Sites folder back using this [tutorial](http://coolestguidesontheplanet.com/get-apache-mysql-php-phpmyadmin-working-osx-10-10-yosemite/). After that just put the `mod_autoindex.oh` files in your Sites folder, and replace `($folder)` with `~yourusername`.
+
 
 ## Contributors & Credits
 - [All the .htaccess magic](http://perishablepress.com/better-default-directory-views-with-htaccess/)
