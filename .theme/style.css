@@ -177,3 +177,8 @@ a[href$="/"]:hover,a[href$="/"]:hover,a.link--breadcrumb:hover {
     background: url('/~meodai/.meta/icons/folder_open@2x.png');
     background-size: 100%;
 }
+/* footer */
+.footer {
+    padding: 1em 0 0;
+    font-size: 0.7em;
+}
