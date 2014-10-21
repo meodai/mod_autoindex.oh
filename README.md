@@ -19,6 +19,11 @@ Assume you want to share a folder called `files`
 
 - Share you folder!
 
+### Global installation
+You can also use the modification system wide by cloning or extracting this repository where ever you like and then place the `mod_autoindex.conf` in `/etc/apache2/other`.
+
+Make sure to adapt the `/FULL/PATH/TO/LOCAL/COPY` in lines 11 and 12 to match the path you used above.
+
 ## Customize
 Feel free to edit all the files. In order to style the project differently. Edit `.theme/style.css`
 
