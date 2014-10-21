@@ -1,0 +1,179 @@
+@import url(http://fonts.googleapis.com/css?family=Roboto:100,400,700);
+
+/* reseting stuff */
+* {
+    margin: 0;
+    padding: 0;
+}
+
+/* basic styles */
+body {
+    font-family: 'Roboto', sans-serif;
+    background: #333;
+    font-size: 1em;
+    padding: 10px;
+    font-weight: 100;
+}
+
+@media only screen and (max-width: 1024px) { /*tablet*/
+    body {
+        padding: 0;
+    }
+}
+
+/* general text styles */
+body, a, a:link, a:visited, a:active {
+    color: #d2d2d2;
+    text-decoration: none;
+}
+
+/* links */
+a {
+    transition: color 200ms ease-in;
+    -webkit-transition: color 200ms ease-in;
+    -moz-transition: color 200ms ease-in;
+    -ms-transition: color 200ms ease-in;
+}
+a:hover {
+    color: #fff;
+}
+
+/* html files */
+a[href$="html"],a[href$="htm"] {
+    color: rgba(160,250,140,.9);
+}
+a[href$="html"]:hover,a[href$="htm"]:hover {
+    color: rgba(160,250,140,1);
+}
+
+/* direcories */
+a[href$="/"],a[href$="/"],a.link--breadcrumb {
+    color: rgba(250,190,110,.9);
+}
+a[href$="/"]:hover,a[href$="/"]:hover,a.link--breadcrumb:hover {
+    color: rgba(250,190,110,1);
+}
+
+/* directory title */
+.main-title {
+    font-size: 1.2em;
+    font-weight: 100;
+    margin-bottom: 0.8em;
+}
+
+
+/* wraps the table */
+.wrap {
+
+}
+
+/* table styles */
+#indexlist { /* file table*/
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 0.9em;
+}
+
+#indexlist a {
+    /* so the links are clickable on the full width of the cell */
+    display: block;
+}
+
+#indexlist tr {
+    /* since its the row is clickable (js) */
+    cursor: pointer;
+}
+
+#indexlist tr td {
+    padding: 0.5em 0.3em;
+
+    transition: background 200ms ease-in;
+    -webkit-transition: background 200ms ease-in;
+    -moz-transition: background 200ms ease-in;
+    -ms-transition: background 200ms ease-in;
+    border-bottom: 1px solid rgba(255,255,255,.05);
+}
+
+#indexlist tr:hover td {
+    background: rgba(45,45,45,1);
+}
+
+.indexcolicon, .indexcolsize  {
+    width: 1px; /* makes the cell use the minimum space */
+    white-space: nowrap;
+}
+
+/* changes the icons size*/
+.indexcolicon img {
+    width: 1.4em;
+}
+
+/* makes the sort links smaller */
+.indexhead {
+    font-size: .8em;
+    text-align: left;
+}
+
+.indexhead th {
+    border: solid rgba(255,255,255,.05);
+    padding: .8em 0;
+    border-width: 1px 0;
+    font-weight: 100;
+}
+
+.indexhead th a:after {
+    position: relative;
+    display: inline-block;
+    content: "‹›";
+    font-size: 1.4em;
+    line-height: 0.2;
+    top: 0.1em;
+    margin: 0 0 0 0.4em;
+    transform: rotate(90deg);
+    -webkit-transform: rotate(90deg);
+    -moz-transform: rotate(90deg);
+    -ms-transform: rotate(90deg);
+    opacity: .4;
+}
+
+.indexhead .indexcollastmod,
+.indexhead .indexcolsize {
+    opacity: 1;
+}
+
+.indexcollastmod, .indexcolsize {
+    opacity: .4;
+
+    transition: opacity 200ms ease-in;
+    -webkit-transition: opacity 200ms ease-in;
+    -moz-transition: opacity 200ms ease-in;
+    -ms-transition: opacity 200ms ease-in;
+}
+
+#indexlist tr:hover .indexcollastmod,
+#indexlist tr:hover .indexcolsize {
+    opacity: 1;
+}
+
+/* styleing for specific file types */
+.type--PARENTDIR {
+    display: none;
+}
+.type--PARENTDIR:hover {
+    opacity: 1;
+}
+.type--DIR .indexcolicon a {
+    position: relative;
+}
+.type--DIR:hover .indexcolicon a img {
+    opacity: 0;
+}
+.type--DIR:hover .indexcolicon a:after {
+    position: absolute;
+    display: block;
+    top: 0; left: 0;
+    content: "";
+    width: 1.4em; height: 1.4em;
+    background: url('/~meodai/.meta/icons/folder_open@2x.png');
+    background-size: 100%;
+}

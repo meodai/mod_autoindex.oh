@@ -1,0 +1,62 @@
+</div>
+<div class="footer">
+    <a href="https://twitter.com/meodai">@meodai</a> &amp;
+</div>
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+<script>
+    <!--
+    (function($,w,d){
+        var parseList, parseTitle;
+
+        //sets the title to the directory title
+        parseTitle = function($h1){
+            var breadCrumb, path, chunks, title = $("title").html();
+            chunks = title.split("/")
+            chunks.shift(); //get rid of "Index Of "
+            path = "";
+
+            breadCrumb = "";
+
+            for(link in chunks){
+                var url = chunks[link]
+                path += "/" + url;
+
+                if (link == chunks.length - 1){
+                    breadCrumb += "/<span class='link--current'>" + chunks[link] + "</span>";
+                }else{
+                    breadCrumb += "/<a class='link--breadcrumb' href='" + path + "' >" + chunks[link] + "</a>";
+                }
+
+            }
+
+            $h1.html(breadCrumb);
+        };
+
+        parseTitle($(".js-main-title"));
+
+        parseList = function($list){
+            var $items = $list.find("tr:not(.indexhead)");
+            $items.each(function(){
+                var type, $this = $(this);
+                type = $this.find("img").attr("alt").replace(/\[/g, '').replace(/\]/g, '');
+                $this.addClass("type--" + type);
+            });
+        };
+
+        parseList($("#indexlist"));
+
+        $(d).on("click.openfile", ".odd, .even", function(e){
+            var href, $this, $link;
+
+            e.preventDefault();
+            $this = $(this);
+            $link = $this.find("a").eq(0);
+            href = $link.attr("href");
+
+            w.location.href = href;
+        });
+
+    }(jQuery,window,document));
+    -->
+</script>
