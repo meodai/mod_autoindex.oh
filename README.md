@@ -3,6 +3,8 @@ Visual enhancement for apache's directory listing.
 
 ![mod_autoindex.oh screenshot](http://s17.postimg.org/ksod9t0cf/Screen_Shot_2014_10_21_at_19_34_34.png)
 
+Also makes it a little more responsive and more usable.
+
 ## Introduction
 I use my `Sites` folder on OSX on a daily basis, so I felt the need to make the file listing a nice and cosy place. Can be used for any Apache file listing.
 
