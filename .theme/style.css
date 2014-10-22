@@ -120,6 +120,7 @@ a[href$="/"]:hover,a[href$="/"]:hover,a.link--breadcrumb:hover {
     border-width: 1px 0;
     font-weight: 100;
     white-space: nowrap;
+    overflow: hidden; /* fixes overflow due to soring icons in header */
 }
 
 .indexhead th a:after {
@@ -185,3 +186,4 @@ a[href$="/"]:hover,a[href$="/"]:hover,a.link--breadcrumb:hover {
     padding: 1em 0 0;
     font-size: 0.7em;
 }
+
