@@ -7,7 +7,7 @@
 <script>
     <!--
     (function($,w,d){
-        var parseList, parseTitle, fixTable;
+        var parseList, parseTitle, fixTable, setTheme;
 
         //fixes for older apache versions
         fixTable = function( $table ){
@@ -77,6 +77,7 @@
 
         parseList($("#indexlist"));
 
+        /* makes the whole row clickable */
         $(d).on("click.openfile", ".odd, .even", function(e){
             var href, $this, $link;
 
@@ -87,6 +88,17 @@
 
             w.location.href = href;
         });
+
+        /* function used to switch between themes */
+        setTheme = function( theme ){
+            $("body").removeClass(function (index, css) {
+                //removes all classes starting with "theme--"
+                return (css.match (/\theme--\S+/g) || []).join(' ');
+            }).addClass("theme--" + theme);
+        };
+
+        /* sets a body class of the default theme */
+        setTheme( $(".wrap").data("theme") );
 
     }(jQuery,window,document));
     -->
