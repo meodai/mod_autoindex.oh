@@ -13,7 +13,7 @@
     IndexOptions +Charset=UTF-8 +FancyIndexing +IgnoreCase +FoldersFirst +XHTML +HTMLTable +SuppressRules +SuppressDescription +NameWidth=* +DescriptionWidth=* +IconsAreLinks +TrackModified +VersionSort
 
  # DEFAULT SORTING
-    IndexOrderDefault Descending Name
+    IndexOrderDefault Ascending Name
 
  # META VIEWPORT
     IndexHeadInsert "<meta name=\"viewport\" content=\"width=device-width, initial-scale=1\">"
