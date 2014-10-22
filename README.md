@@ -25,7 +25,7 @@ You can also use the modification system wide by cloning or extracting this repo
 Make sure to adapt the `/FULL/PATH/TO/LOCAL/COPY` in lines 11 and 12 to match the path you used above.
 
 ### Hidden files
-- This project used a hidden .theme and .htaccess file. If you want to show the hidden project files in your Finder, enter this command in your Terminal: `defaults write com.apple.finder AppleShowAllFiles YES`
+- This project uses hidden .theme and .htaccess files. If you want to show the hidden project files in your Finder, enter this command in your Terminal: `defaults write com.apple.finder AppleShowAllFiles YES`
 
 ## Customize
 Feel free to edit all the files. In order to style the project differently. Edit `.theme/style.css`
