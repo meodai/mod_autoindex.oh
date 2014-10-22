@@ -3,6 +3,8 @@ Visual enhancement for apache's directory listing.
 
 ![mod_autoindex.oh screenshot](http://s17.postimg.org/ksod9t0cf/Screen_Shot_2014_10_21_at_19_34_34.png)
 
+Also makes it a little more responsive and more usable.
+
 ## Introduction
 I use my `Sites` folder on OSX on a daily basis, so I felt the need to make the file listing a nice and cosy place. Can be used for any Apache file listing.
 
@@ -15,7 +17,12 @@ Assume you want to share a folder called `files`
 - edit the `.htaccess` file. And replace all `($folder)` with `files`.
   *ex. `HeaderName /($folder)/.theme/header.html` should become `HeaderName /files/.theme/header.html`*
 
-- Share you folder!
+- Share your folder!
+
+### Global installation
+You can also use the modification system wide by cloning or extracting this repository where ever you like and then place the `mod_autoindex.conf` in `/etc/apache2/other`.
+
+Make sure to adapt the `/FULL/PATH/TO/LOCAL/COPY` in lines 11 and 12 to match the path you used above.
 
 ## Customize
 Feel free to edit all the files. In order to style the project differently. Edit `.theme/style.css`
