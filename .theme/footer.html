@@ -7,7 +7,38 @@
 <script>
     <!--
     (function($,w,d){
-        var parseList, parseTitle;
+        var parseList, parseTitle, fixTable;
+
+        //fixes for older apache versions
+        fixTable = function( $table ){
+            //newer apache version do give classes and ID's to the file list
+            if( $table.is('#indexlist') ) { return };
+
+            var $tr, $td;
+
+            //adds the correct ID
+            $table.attr("id", "indexlist");
+            $tr = $table.find("tr");
+
+            //adds class to the index head
+            $tr.eq(0).addClass("indexhead")
+
+            $tr.not(":first").each(function(){
+                $td = $(this).find("td");
+
+                if ( $td.is(":even") ) {
+                    $td.addClass("even");
+                } else {
+                    $td.addClass("odd");
+                }
+                $td.eq(0).addClass("indexcolicon");
+                $td.eq(1).addClass("indexcolname");
+                $td.eq(2).addClass("indexcollastmod");
+                $td.eq(3).addClass("indexcolsize");
+            });
+        };
+
+        fixTable( $(".wrap table").eq(0) );
 
         //sets the title to the directory title
         parseTitle = function($h1){
