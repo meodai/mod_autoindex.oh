@@ -7,7 +7,7 @@
 <script>
     <!--
     (function($,w,d){
-        var parseList, parseTitle, fixTable, setTheme;
+        var parseList, parseTitle, fixTable, setTheme, setFolderHover;
 
         //fixes for older apache versions
         fixTable = function( $table ){
@@ -99,6 +99,13 @@
 
         /* sets a body class of the default theme */
         setTheme( $(".wrap").data("theme") );
+
+        /*sets the hover icons for folders */
+        setFolderHover = function( src ){
+            $(".type--DIR .indexcolicon a").append("<img class='hover' src='" + src + "' alt='folder hover' />")
+        };
+
+        setFolderHover( $(".type--PARENTDIR img:eq(0)").attr("src") );
 
     }(jQuery,window,document));
     -->

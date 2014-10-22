@@ -168,17 +168,12 @@ a[href$="/"]:hover,a[href$="/"]:hover,a.link--breadcrumb:hover {
 .type--DIR .indexcolicon a {
     position: relative;
 }
+.type--DIR .indexcolicon a img.hover,
 .type--DIR:hover .indexcolicon a img {
-    opacity: 0;
+    display: none;
 }
-.type--DIR:hover .indexcolicon a:after {
-    position: absolute;
+.type--DIR:hover .indexcolicon a img.hover {
     display: block;
-    top: 0; left: 0;
-    content: "";
-    width: 1.4em; height: 1.4em;
-    background: url('/~meodai/.meta/icons/folder_open@2x.png');
-    background-size: 100%;
 }
 
 /* footer */
@@ -186,4 +181,3 @@ a[href$="/"]:hover,a[href$="/"]:hover,a.link--breadcrumb:hover {
     padding: 1em 0 0;
     font-size: 0.7em;
 }
-
