@@ -7,7 +7,7 @@
 <script>
     <!--
     (function($,w,d){
-        var parseList, parseTitle, fixTable, setTheme, setFolderHover;
+        var parseList, parseTitle, fixTable, setTheme, setFolderHover, filter;
 
         //fixes for older apache versions
         fixTable = function( $table ){
@@ -106,6 +106,22 @@
         };
 
         setFolderHover( $(".type--PARENTDIR img:eq(0)").attr("src") );
+
+        /* filter field */
+        filter = function( inputSelector ){
+            var timer, $tr = $("#indexlist tr").not(":first");
+
+            $(d).on("keyup.filter", inputSelector, function(e){
+                clearTimeout(timer);
+                var $this = $(this);
+                timer = setTimeout(function(){
+                    $tr.removeClass("is-nomatch");
+                    $tr.not(":contains(" + $this.val() + ")").addClass("is-nomatch");
+                },50);
+            });
+        };
+
+        filter( ".js-search" );
 
     }(jQuery,window,document));
     -->
