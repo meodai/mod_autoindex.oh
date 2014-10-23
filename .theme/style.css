@@ -54,11 +54,26 @@ a[href$="/"]:hover,a[href$="/"]:hover,a.link--breadcrumb:hover {
     color: rgba(250,190,110,1);
 }
 
+/* header */
+.header {
+
+}
+.search {
+    box-sizing: border-box;
+}
+.search--main {
+    display: inline-block;
+    float: right;
+    width: 20%;
+}
+
 /* directory title */
 .main-title {
+    float: left;
     font-size: 1.2em;
     font-weight: 100;
     margin-bottom: 0.8em;
+    max-width: 80%;
 }
 
 
