@@ -60,11 +60,16 @@ a[href$="/"]:hover,a[href$="/"]:hover,a.link--breadcrumb:hover {
 }
 .search {
     box-sizing: border-box;
+    background: rgba(45,45,45,1);
+    border: none;
+    padding: 0.6em;
+    color: #fff;
+    outline: none;
 }
 .search--main {
     display: inline-block;
     float: right;
-    width: 20%;
+    width: 30%;
 }
 
 /* directory title */
@@ -73,7 +78,7 @@ a[href$="/"]:hover,a[href$="/"]:hover,a.link--breadcrumb:hover {
     font-size: 1.2em;
     font-weight: 100;
     margin-bottom: 0.8em;
-    max-width: 80%;
+    max-width: 70%;
 }
 
 
