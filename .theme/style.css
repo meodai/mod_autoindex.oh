@@ -99,6 +99,10 @@ a[href$="/"]:hover,a[href$="/"]:hover,a.link--breadcrumb:hover {
     cursor: pointer;
 }
 
+#indexlist tr.is-nomatch {
+    display: none;
+}
+
 #indexlist tr td {
     padding: 0.5em 0.3em;
 
