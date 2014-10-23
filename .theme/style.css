@@ -58,6 +58,11 @@ a[href$="/"]:hover,a[href$="/"]:hover,a.link--breadcrumb:hover {
 .header {
 
 }
+@media only screen and (max-width : 400px) {
+    .header {
+        padding: 0.5em;
+    }
+}
 .search {
     box-sizing: border-box;
     background: rgba(45,45,45,1);
@@ -65,12 +70,25 @@ a[href$="/"]:hover,a[href$="/"]:hover,a.link--breadcrumb:hover {
     padding: 0.6em;
     color: #fff;
     outline: none;
+    border-radius: 4px;
 }
+
+.search:focus {
+    box-shadow: 0 0 0 1px rgba(250,190,110,.9);
+}
+
 .search--main {
     display: inline-block;
     float: right;
     width: 30%;
 }
+@media only screen and (max-width : 400px) {
+    .search--main {
+        width: 100%;
+        float: none;
+    }
+}
+
 
 /* directory title */
 .main-title {
@@ -80,7 +98,12 @@ a[href$="/"]:hover,a[href$="/"]:hover,a.link--breadcrumb:hover {
     margin-bottom: 0.8em;
     max-width: 70%;
 }
-
+@media only screen and (max-width : 400px) {
+    .main-title {
+        max-width: 100%;
+        float: none;
+    }
+}
 
 /* wraps the table */
 .wrap {
