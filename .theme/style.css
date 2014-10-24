@@ -66,7 +66,7 @@ a[href$="/"]:hover,a[href$="/"]:hover,a.link--breadcrumb:hover {
     box-sizing: border-box;
     box-shadow: 0 0 20px #333;
 }
-.header:before {
+.header:before { /* cover left part of the path overflow */
     z-index: 2;
     position: absolute;
     display: block;
