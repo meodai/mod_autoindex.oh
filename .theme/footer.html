@@ -22,6 +22,7 @@
 
             //adds class to the index head
             $tr.eq(0).addClass("indexhead")
+            $tr.eq(1).addClass("type--PARENTDIR");
 
             $tr.not(":first").each(function(){
                 $td = $(this).find("td");
