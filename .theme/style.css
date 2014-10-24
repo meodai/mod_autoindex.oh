@@ -66,6 +66,21 @@ a[href$="/"]:hover,a[href$="/"]:hover,a.link--breadcrumb:hover {
     box-sizing: border-box;
     box-shadow: 0 0 20px #333;
 }
+.header:before {
+    z-index: 2;
+    position: absolute;
+    display: block;
+    content: "";
+    top: 0; left: 0; bottom: 0;
+    width: 1em;
+    background: pink;
+    background: -moz-linear-gradient(left, rgb(45,45,45) 0%, rgba(0,0,0,0) 100%); /* FF3.6+ */
+    background: -webkit-gradient(linear, left top, right top, color-stop(0%,rgb(45,45,45)), color-stop(100%,rgba(0,0,0,0))); /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(left, rgb(45,45,45) 0%,rgba(0,0,0,0) 100%); /* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient(left, rgb(45,45,45) 0%,rgba(0,0,0,0) 100%); /* Opera 11.10+ */
+    background: -ms-linear-gradient(left, rgb(45,45,45) 0%,rgba(0,0,0,0) 100%); /* IE10+ */
+    background: linear-gradient(to right, rgb(45,45,45) 0%,rgba(0,0,0,0) 100%); /* W3C */
+}
 @media only screen and (max-width : 400px) {
     .header {
         padding: 0.5em;
