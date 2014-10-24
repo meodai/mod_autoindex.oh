@@ -56,38 +56,119 @@ a[href$="/"]:hover,a[href$="/"]:hover,a.link--breadcrumb:hover {
 
 /* header */
 .header {
+    z-index: 2;
+    position: fixed;
+    top: 0; left: 0; right: 0;
+    min-height: 50px;
+    background: rgba(45,45,45,1);
+    background: #333;
+    padding: 10px 10px 0;
+    box-sizing: border-box;
+    box-shadow: 0 0 20px #333;
+}
 
+.header:before { /* cover left part of the path overflow */
+    z-index: 2;
+    position: absolute;
+    display: block;
+    content: "";
+    top: 0; left: 0; bottom: 0;
+    width: 1em;
+    background: pink;
+    background: -moz-linear-gradient(left, rgb(45,45,45) 0%, rgba(0,0,0,0) 100%); /* FF3.6+ */
+    background: -webkit-gradient(linear, left top, right top, color-stop(0%,rgb(45,45,45)), color-stop(100%,rgba(0,0,0,0))); /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(left, rgb(45,45,45) 0%,rgba(0,0,0,0) 100%); /* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient(left, rgb(45,45,45) 0%,rgba(0,0,0,0) 100%); /* Opera 11.10+ */
+    background: -ms-linear-gradient(left, rgb(45,45,45) 0%,rgba(0,0,0,0) 100%); /* IE10+ */
+    background: linear-gradient(to right, rgb(45,45,45) 0%,rgba(0,0,0,0) 100%); /* W3C */
 }
 @media only screen and (max-width : 400px) {
     .header {
         padding: 0.5em;
     }
 }
+
+/* search icon */
+.search--icon {
+    position: absolute;
+    top: 0.1em;
+    right: 0;
+    display: block;
+    width: 1.5em; height: 1.5em;
+    cursor: pointer;
+}
+/* icon is done with css */
+.search--icon:after,
+.search--icon:before {
+    display: block;
+    content: "";
+    position: absolute;
+}
+.search--icon:after { /* this is the circle */
+    top: 0; left: 0;
+    width: 50%; height: 50%;
+    border: 2px solid rgba(250,190,110,.9);
+    border-radius: 100%;
+}
+.search--icon:before { /* this is the stick */
+    top: 50%; left: 50%;
+    width: 3px; height: 40%;
+    background: rgba(250,190,110,.9);
+    transform: translateX(50%) rotate(-35deg);
+}
+
+.search--label { /* label wraps the icon and the input */
+    position: absolute;
+    top: 0.7em; right: 0.5em;
+    display: block;
+    width: 27%;
+}
+.search--label:hover .search--icon:after {
+    border-color: #fff;
+}
+.search--label:hover .search--icon:before {
+    background: #fff;
+}
+
+/* search input field */
 .search {
     box-sizing: border-box;
-    background: rgba(45,45,45,1);
+    background: #fff;
     border: none;
     padding: 0.6em;
-    color: #fff;
+    color: rgba(45,45,45,1);
     outline: none;
     border-radius: 4px;
+    opacity: 0;
+    width: 1.5em;
+
+    transition: width 300ms ease-in-out, opacity 250ms ease-in-out;
+    -webkit-transition: width 300ms ease-in-out, opacity 250ms ease-in-out;
+    -moz-transition: width 300ms ease-in-out, opacity 250ms ease-in-out;
+    -ms-transition: width 300ms ease-in-out, opacity 250ms ease-in-out;
 }
 
 .search:focus {
-    box-shadow: 0 0 0 1px rgba(250,190,110,.9);
+    opacity: 1;
+    width: 110%;
+
+    transition: width 300ms ease-in-out, opacity 100ms ease-in-out;
+    -webkit-transition: width 300ms ease-in-out, opacity 100ms ease-in-out;
+    -moz-transition: width 300ms ease-in-out, opacity 100ms ease-in-out;
+    -ms-transition: width 300ms ease-in-out, opacity 100ms ease-in-out;
+}
+
+.search:focus + .search--icon {
+    opacity: 0;
+    z-index: 1;
 }
 
 .search--main {
-    display: inline-block;
-    float: right;
-    width: 30%;
+    z-index: 2;
+    position: absolute;
+    top: 0; right: 0;
 }
-@media only screen and (max-width : 400px) {
-    .search--main {
-        width: 100%;
-        float: none;
-    }
-}
+
 
 
 /* directory title */
@@ -96,18 +177,22 @@ a[href$="/"]:hover,a[href$="/"]:hover,a.link--breadcrumb:hover {
     font-size: 1.2em;
     font-weight: 100;
     margin-bottom: 0.8em;
-    max-width: 70%;
+    width: calc(100% - 2em);
+    position: relative;
+    height: 1.2em;
 }
-@media only screen and (max-width : 400px) {
-    .main-title {
-        max-width: 100%;
-        float: none;
-    }
+
+.main-title--inner { /* makes sure the title is cut of to the left */
+    position: absolute;
+    display: block;
+    top: 0; right: 0;
+    min-width: 100%;
+    white-space: nowrap;
 }
 
 /* wraps the table */
 .wrap {
-
+    margin-top: 50px; /* height of the fixed header */
 }
 
 /* table styles */
