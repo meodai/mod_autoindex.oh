@@ -66,6 +66,7 @@ a[href$="/"]:hover,a[href$="/"]:hover,a.link--breadcrumb:hover {
     box-sizing: border-box;
     box-shadow: 0 0 20px #333;
 }
+
 .header:before { /* cover left part of the path overflow */
     z-index: 2;
     position: absolute;
@@ -87,6 +88,7 @@ a[href$="/"]:hover,a[href$="/"]:hover,a.link--breadcrumb:hover {
     }
 }
 
+/* search icon */
 .search--icon {
     position: absolute;
     top: 0.1em;
@@ -95,26 +97,27 @@ a[href$="/"]:hover,a[href$="/"]:hover,a.link--breadcrumb:hover {
     width: 1.5em; height: 1.5em;
     cursor: pointer;
 }
+/* icon is done with css */
 .search--icon:after,
 .search--icon:before {
     display: block;
     content: "";
     position: absolute;
 }
-.search--icon:after {
+.search--icon:after { /* this is the circle */
     top: 0; left: 0;
     width: 50%; height: 50%;
     border: 2px solid rgba(250,190,110,.9);
     border-radius: 100%;
 }
-.search--icon:before {
+.search--icon:before { /* this is the stick */
     top: 50%; left: 50%;
     width: 3px; height: 40%;
     background: rgba(250,190,110,.9);
     transform: translateX(50%) rotate(-35deg);
 }
 
-.search--label {
+.search--label { /* label wraps the icon and the input */
     position: absolute;
     top: 0.7em; right: 0.5em;
     display: block;
@@ -127,19 +130,18 @@ a[href$="/"]:hover,a[href$="/"]:hover,a.link--breadcrumb:hover {
     background: #fff;
 }
 
-
+/* search input field */
 .search {
     box-sizing: border-box;
-    background: rgba(45,45,45,1);
     background: #fff;
     border: none;
     padding: 0.6em;
-    color: #fff;
     color: rgba(45,45,45,1);
     outline: none;
     border-radius: 4px;
     opacity: 0;
     width: 1.5em;
+
     transition: width 300ms ease-in-out, opacity 250ms ease-in-out;
     -webkit-transition: width 300ms ease-in-out, opacity 250ms ease-in-out;
     -moz-transition: width 300ms ease-in-out, opacity 250ms ease-in-out;
