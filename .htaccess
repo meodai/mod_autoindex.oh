@@ -19,51 +19,51 @@
     IndexHeadInsert "<meta name=\"viewport\" content=\"width=device-width, initial-scale=1\">"
 
  # THEME FILES
-    HeaderName /($folder)/.theme/header.html
-    ReadmeName /($folder)/.theme/footer.html
-    IndexStyleSheet /($folder)/.theme/style.css
+    HeaderName /OhSiteFolderPath/.theme/header.html
+    ReadmeName /OhSiteFolderPath/.theme/footer.html
+    IndexStyleSheet /OhSiteFolderPath/.theme/style.css
 
  # ICONS
-    #AddIcon /($folder)/.theme/icons/blank.png ^^BLANKICON^^
-    AddIcon /($folder)/.theme/icons/folder@2x.png ^^DIRECTORY^^
-    AddIcon /($folder)/.theme/icons/folder_open@2x.png ..
+    #AddIcon /OhSiteFolderPath/.theme/icons/blank.png ^^BLANKICON^^
+    AddIcon /OhSiteFolderPath/.theme/icons/folder@2x.png ^^DIRECTORY^^
+    AddIcon /OhSiteFolderPath/.theme/icons/folder_open@2x.png ..
 
     #VECTOR IMAGES
-    AddIcon /($folder)/.theme/icons/file_type_ai@2x.png .ai .eps .svg .svgz
+    AddIcon /OhSiteFolderPath/.theme/icons/file_type_ai@2x.png .ai .eps .svg .svgz
 
     #ARCHIVES
-    AddIcon /($folder)/.theme/icons/file_type_archive@2x.png .7z .bz2 .cab .gz .tar .rar .zip
+    AddIcon /OhSiteFolderPath/.theme/icons/file_type_archive@2x.png .7z .bz2 .cab .gz .tar .rar .zip
 
     #BINARIES AND EXECUTABLES
-    AddIcon /($folder)/.theme/icons/file_type_binary@2x.png .bin .hex .exe .sh
+    AddIcon /OhSiteFolderPath/.theme/icons/file_type_binary@2x.png .bin .hex .exe .sh
 
     #CSS
-    AddIcon /($folder)/.theme/icons/file_type_css@2x.png .css .sass .scss .less
+    AddIcon /OhSiteFolderPath/.theme/icons/file_type_css@2x.png .css .sass .scss .less
 
     #FRONS
-    AddIcon /($folder)/.theme/icons/file_type_font@2x.png .ttf .woff .eot .otf
+    AddIcon /OhSiteFolderPath/.theme/icons/file_type_font@2x.png .ttf .woff .eot .otf
 
     #HTML
-    AddIcon /($folder)/.theme/icons/file_type_html@2x.png .html .xhtml .shtml .htm .URL .url .haml .jade .hbs .xml
+    AddIcon /OhSiteFolderPath/.theme/icons/file_type_html@2x.png .html .xhtml .shtml .htm .URL .url .haml .jade .hbs .xml
 
     #IMAGES
-    AddIcon /($folder)/.theme/icons/file_type_image@2x.png .jpg .jpeg .jpe .ico .gif .png .psd .bmp .tiff .tif
+    AddIcon /OhSiteFolderPath/.theme/icons/file_type_image@2x.png .jpg .jpeg .jpe .ico .gif .png .psd .bmp .tiff .tif
 
     #JS
-    AddIcon /($folder)/.theme/icons/file_type_js@2x.png .js .json .coffee
+    AddIcon /OhSiteFolderPath/.theme/icons/file_type_js@2x.png .js .json .coffee
 
     #PHP
-    AddIcon /($folder)/.theme/icons/file_type_php@2x.png .php .phtml
+    AddIcon /OhSiteFolderPath/.theme/icons/file_type_php@2x.png .php .phtml
 
     #RUBY
-    AddIcon /($folder)/.theme/icons/file_type_ruby@2x.png .rb
+    AddIcon /OhSiteFolderPath/.theme/icons/file_type_ruby@2x.png .rb
 
     #DOCUMENTS
-    AddIcon /($folder)/.theme/icons/file_type_markdown@2x.png .md .txt .nfo
-    AddIcon /($folder)/.theme/icons/file_type_pdf@2x.png .pdf
-    AddIcon /($folder)/.theme/icons/file_type_text@2x.png .doc .docx .docm .dot .dotx .dotm .log .msg .odt .pages .rtf .tex .wpd .wps
+    AddIcon /OhSiteFolderPath/.theme/icons/file_type_markdown@2x.png .md .txt .nfo
+    AddIcon /OhSiteFolderPath/.theme/icons/file_type_pdf@2x.png .pdf
+    AddIcon /OhSiteFolderPath/.theme/icons/file_type_text@2x.png .doc .docx .docm .dot .dotx .dotm .log .msg .odt .pages .rtf .tex .wpd .wps
 
     #DEFAULT
-    DefaultIcon /($folder)/.theme/icons/file_type_default@2x.png
+    DefaultIcon /OhSiteFolderPath/.theme/icons/file_type_default@2x.png
 
 </IfModule>
