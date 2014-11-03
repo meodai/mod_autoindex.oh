@@ -313,3 +313,7 @@ a[href$="/"]:hover,a[href$="/"]:hover,a.link--breadcrumb:hover {
     padding: 1em 0 0;
     font-size: 0.7em;
 }
+
+.date--original {
+    display: none;
+}
