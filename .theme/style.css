@@ -114,6 +114,9 @@ a[href$="/"],a[href$="/"],a.link--breadcrumb {
     width: 3px; height: 40%;
     background: rgba(250,190,110,.9);
     transform: translateX(50%) rotate(-35deg);
+    -webkit-transform: translateX(50%) rotate(-35deg);
+    -moz-transform: translateX(50%) rotate(-35deg);
+    -ms-transform: translateX(50%) rotate(-35deg);
 }
 
 .search--label { /* label wraps the icon and the input */
