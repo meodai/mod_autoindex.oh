@@ -74,7 +74,6 @@ a[href$="/"]:hover,a[href$="/"]:hover,a.link--breadcrumb:hover {
     content: "";
     top: 0; left: 0; bottom: 0;
     width: 1em;
-    background: pink;
     background: -moz-linear-gradient(left, rgb(45,45,45) 0%, rgba(0,0,0,0) 100%); /* FF3.6+ */
     background: -webkit-gradient(linear, left top, right top, color-stop(0%,rgb(45,45,45)), color-stop(100%,rgba(0,0,0,0))); /* Chrome,Safari4+ */
     background: -webkit-linear-gradient(left, rgb(45,45,45) 0%,rgba(0,0,0,0) 100%); /* Chrome10+,Safari5.1+ */
@@ -189,6 +188,42 @@ a[href$="/"]:hover,a[href$="/"]:hover,a.link--breadcrumb:hover {
     min-width: 100%;
     white-space: nowrap;
 }
+
+/* breadcrumb */
+.link--current {
+    position: relative;
+}
+
+.link--current:after {
+    z-index: 1;
+    position: relative;
+    display: inline-block;
+
+    top: 3px; right: 2px;
+    margin: 0 0 0 10px;
+
+    content: "›";
+
+    color: rgba(250,190,110,.9);
+    transform: rotate(90deg);
+    -webkit-transform: rotate(90deg);
+    -moz-transform: rotate(90deg);
+    -ms-transform: rotate(90deg);
+}
+
+.link--current:hover:after {
+    color: #fff;
+}
+
+.breadcrumb-select {
+    z-index: 2;
+    position: absolute;
+    left: 0; bottom: 0;
+    width: 100%;
+    opacity: 0;
+}
+
+
 
 /* wraps the table */
 .wrap {

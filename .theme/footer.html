@@ -32,7 +32,7 @@ return a+c}}),Jb?module.exports=tb:"function"==typeof define&&define.amd?(define
 <script>
     //actual mod_autoindex.oh code
     (function($,w,d){
-        var parseList, parseTitle, fixTable, setTheme, setFolderHover, filter, setDates;
+        var parseList, parseTitle, fixTable, setTheme, setFolderHover, filter, setDates, urlSelect;
 
         //fixes for older apache versions
         fixTable = function( $table ){
@@ -68,7 +68,7 @@ return a+c}}),Jb?module.exports=tb:"function"==typeof define&&define.amd?(define
 
         //sets the title to the directory title
         parseTitle = function($h1){
-            var breadCrumb, path, chunks, title = $("title").html();
+            var breadCrumb, breadCrumbSelect, path, chunks, i, title = $("title").html();
             chunks = title.split("/")
             chunks.shift(); //get rid of "Index Of "
             path = "";
@@ -80,14 +80,27 @@ return a+c}}),Jb?module.exports=tb:"function"==typeof define&&define.amd?(define
                 path += "/" + url;
 
                 if (link == chunks.length - 1){
-                    breadCrumb += "/<span class='link--current'>" + chunks[link] + "</span>";
+                    breadCrumb += "/<span class='link--current js-link--current'>" + chunks[link] + "</span>";
                 }else{
                     breadCrumb += "/<a class='link--breadcrumb' href='" + path + "' >" + chunks[link] + "</a>";
                 }
-
             }
 
+            breadCrumbSelect = "<select class='js-breadcrumb-select breadcrumb-select'>";
+
+            path = "";
+
+            for(link in chunks.reverse()){
+                var url = chunks[link]
+                breadCrumbSelect += "<option value='" + path + "'>" + chunks[link] + "</option>";
+                path += "../";
+            }
+
+            breadCrumbSelect += "</select>"
+
             $h1.html(breadCrumb);
+            $(".js-link--current").append(breadCrumbSelect);
+
         };
 
         parseTitle($(".js-main-title"));
@@ -170,6 +183,16 @@ return a+c}}),Jb?module.exports=tb:"function"==typeof define&&define.amd?(define
         };
 
         setDates( $(".indexcollastmod").not(":first") );
+
+        //update the URL of the page based on the value of a select
+        urlSelect = function( selectSelector ){
+            $(document).on("change.urlSelect", selectSelector, function(e){
+                e.preventDefault();
+                document.location.href = $(this).find("option:selected").attr("value");
+            })
+        };
+
+        urlSelect( ".js-breadcrumb-select" );
 
     }(jQuery,window,document));
 </script>
