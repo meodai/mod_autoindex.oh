@@ -34,7 +34,7 @@ a {
     -moz-transition: color 200ms ease-in;
     -ms-transition: color 200ms ease-in;
 }
-a:hover {
+.has-no-touch a:hover {
     color: #fff;
 }
 
@@ -42,7 +42,7 @@ a:hover {
 a[href$="html"],a[href$="htm"] {
     color: rgba(160,250,140,.9);
 }
-a[href$="html"]:hover,a[href$="htm"]:hover {
+.has-no-touch a[href$="html"]:hover, .has-no-touch a[href$="htm"]:hover {
     color: rgba(160,250,140,1);
 }
 
@@ -50,7 +50,7 @@ a[href$="html"]:hover,a[href$="htm"]:hover {
 a[href$="/"],a[href$="/"],a.link--breadcrumb {
     color: rgba(250,190,110,.9);
 }
-a[href$="/"]:hover,a[href$="/"]:hover,a.link--breadcrumb:hover {
+.has-no-touch a[href$="/"]:hover, .has-no-touch a[href$="/"]:hover,.has-no-touch a.link--breadcrumb:hover {
     color: rgba(250,190,110,1);
 }
 
@@ -122,10 +122,10 @@ a[href$="/"]:hover,a[href$="/"]:hover,a.link--breadcrumb:hover {
     display: block;
     width: 27%;
 }
-.search--label:hover .search--icon:after {
+.has-no-touch .search--label:hover .search--icon:after {
     border-color: #fff;
 }
-.search--label:hover .search--icon:before {
+.has-no-touch .search--label:hover .search--icon:before {
     background: #fff;
 }
 
@@ -211,7 +211,7 @@ a[href$="/"]:hover,a[href$="/"]:hover,a.link--breadcrumb:hover {
     -ms-transform: rotate(90deg);
 }
 
-.link--current:hover:after {
+.has-no-touch .link--current:hover:after {
     color: #fff;
 }
 
@@ -261,7 +261,7 @@ a[href$="/"]:hover,a[href$="/"]:hover,a.link--breadcrumb:hover {
     border-bottom: 1px solid rgba(255,255,255,.05);
 }
 
-#indexlist tr:hover td {
+.has-no-touch #indexlist tr:hover td {
     background: rgba(45,45,45,1);
 }
 
@@ -320,8 +320,8 @@ a[href$="/"]:hover,a[href$="/"]:hover,a.link--breadcrumb:hover {
     -ms-transition: opacity 200ms ease-in;
 }
 
-#indexlist tr:hover .indexcollastmod,
-#indexlist tr:hover .indexcolsize {
+.has-no-touch #indexlist tr:hover .indexcollastmod,
+.has-no-touch #indexlist tr:hover .indexcolsize {
     opacity: 1;
 }
 
@@ -329,17 +329,17 @@ a[href$="/"]:hover,a[href$="/"]:hover,a.link--breadcrumb:hover {
 .type--PARENTDIR {
     display: none;
 }
-.type--PARENTDIR:hover {
+.has-no-touch .type--PARENTDIR:hover {
     opacity: 1;
 }
 .type--DIR .indexcolicon a {
     position: relative;
 }
 .type--DIR .indexcolicon a img.hover,
-.type--DIR:hover .indexcolicon a img {
+.has-no-touch .type--DIR:hover .indexcolicon a img {
     display: none;
 }
-.type--DIR:hover .indexcolicon a img.hover {
+.has-no-touch .type--DIR:hover .indexcolicon a img.hover {
     display: block;
 }
 

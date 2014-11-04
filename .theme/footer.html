@@ -32,7 +32,24 @@ return a+c}}),Jb?module.exports=tb:"function"==typeof define&&define.amd?(define
 <script>
     //actual mod_autoindex.oh code
     (function($,w,d){
-        var parseList, parseTitle, fixTable, setTheme, setFolderHover, filter, setDates, urlSelect;
+        var parseList, parseTitle, fixTable, setTheme, setFolderHover, filter, setDates, urlSelect, has_touch;
+
+        //touch detection
+        has_touch = function () {
+          try {
+            document.createEvent("TouchEvent");
+            return true;
+          } catch (e) {
+            return false;
+          }
+        }
+
+        if( has_touch() ){
+            $('body').addClass('has-touch');
+        } else {
+            $('body').addClass('has-no-touch');
+        }
+
 
         //fixes for older apache versions
         fixTable = function( $table ){
