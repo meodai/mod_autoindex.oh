@@ -128,7 +128,7 @@ return a+c}}),Jb?module.exports=tb:"function"==typeof define&&define.amd?(define
                 var type,
                     $this = $(this),
                     $img = $this.find("img");
-                if ($img.length) {
+                if ($img.length && $img.attr("alt").length) {
                     type = $img.attr("alt").replace(/\[/g, '').replace(/\]/g, '');
                     $this.addClass("type--" + type);
                 }
