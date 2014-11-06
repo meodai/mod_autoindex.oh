@@ -125,9 +125,13 @@ return a+c}}),Jb?module.exports=tb:"function"==typeof define&&define.amd?(define
         parseList = function($list){
             var $items = $list.find("tr:not(.indexhead)");
             $items.each(function(){
-                var type, $this = $(this);
-                type = $this.find("img").attr("alt").replace(/\[/g, '').replace(/\]/g, '');
-                $this.addClass("type--" + type);
+                var type,
+                    $this = $(this),
+                    $img = $this.find("img");
+                if ($img.length && $img.attr("alt").length) {
+                    type = $img.attr("alt").replace(/\[/g, '').replace(/\]/g, '');
+                    $this.addClass("type--" + type);
+                }
             });
         };
 
