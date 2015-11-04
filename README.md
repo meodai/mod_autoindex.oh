@@ -8,6 +8,8 @@ Also makes it a little more responsive and more usable.
 ## Introduction
 I use my `Sites` folder on OSX on a daily basis, so I felt the need to make the file listing a nice and cosy place. Can be used for any Apache file listing.
 
+If you are a OSX user you may want to read [this](http://coolestguidesontheplanet.com/get-apache-mysql-php-and-phpmyadmin-working-on-osx-10-11-el-capitan/) to make your sites folder work.
+
 ## Installation
 Place the files found in this repository in whatever folder you want to enhance with `mod_autoindex.oh`
 
