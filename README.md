@@ -26,6 +26,9 @@ You can also use the modification system wide by cloning or extracting this repo
 
 Make sure to adapt the `/FULL/PATH/TO/LOCAL/COPY` in lines 11 and 12 to match the path you used above.
 
+### MAMP installation
+put the .htaccess file and the .theme folder inside the MAMP install's document root. Then edit the .htaccess and just replace all entries saying `/($folder)/.theme` with `/.theme`.
+
 ### Hidden files
 This project uses hidden .theme and .htaccess files. If you want to show the hidden project files in your Finder, enter this command in your Terminal: `defaults write com.apple.finder AppleShowAllFiles YES`
 
