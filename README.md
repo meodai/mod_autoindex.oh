@@ -16,8 +16,7 @@ Place the files found in this repository in whatever folder you want to enhance 
 Assume you want to share a folder called `files`
 - Download `mod_autoindex.oh` and unzip it in the `files` folder. Alternatively you can use shell go to your `files` folder and check out this project there `git clone git@github.com:meodai/mod_autoindex.oh.git`
 
-- edit the `.htaccess` file. And replace all `($folder)` with `files`.
-  *ex. `HeaderName /($folder)/.theme/header.html` should become `HeaderName /files/.theme/header.html`*
+- run `. configure.sh` and type in the name of you folder `files`.
 
 - Share your folder!
 
