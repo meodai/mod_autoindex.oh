@@ -1,11 +1,14 @@
 #!/usr/bin/env bash
 
-#run with: sudo sh ./osx-sites-folder.sh
+# store $USER because it could be ROOT after sudo
+ME=$USER;
+
 # Ask for the administrator password upfront
 sudo -v
 
 # Keep-alive: update existing `sudo` time stamp until `.macos` has finished
 while true; do sudo -n true; sleep 60; kill -0 "$$" || exit; done 2>/dev/null &
+
 
 # Start OSX apache
 sudo apachectl start
@@ -14,8 +17,8 @@ mkdir ~/Sites
 # whoami
 
 # create new bash profile
-sudo cat >/etc/apache2/users/$USER.conf <<EOF
-<Directory "/Users/$USER/Sites/">
+sudo cat >/etc/apache2/users/$ME.conf <<EOF
+<Directory "/Users/$ME/Sites/">
     AllowOverride All
     Options Indexes MultiViews
     Options +FollowSymLinks
@@ -24,7 +27,7 @@ sudo cat >/etc/apache2/users/$USER.conf <<EOF
 EOF
 
 # changes chmod of username.conf file
-sudo chmod 644 /etc/apache2/users/$USER.conf
+sudo chmod 644 /etc/apache2/users/$ME.conf
 
 # creates a multiline variable containing the lines to uncomment in httpd.conf
 read -r -d '' directives << EOM
@@ -37,8 +40,10 @@ Include /private/etc/apache2/extra/httpd-userdir.conf
 EOM
 
 # set for delimiter to new line and saves the old delimiter
-IFSBack=$IFS
+IFSBack="$IFS"
 IFS=$"\n"
+...
+IFS="$OLDIFS"
 
 # uncomments lines in httpd.conf
 echo "Configure apatche:"
@@ -54,8 +59,10 @@ unset directive;
 unset directives;
 
 # set IFS back to what it was
-IFS=$IFSBack
+IFS="$IFSBack"
 unset IFSBack
+
+unset ME
 
 # restart apatche
 sudo apachectl restart;
