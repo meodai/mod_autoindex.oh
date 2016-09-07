@@ -1,5 +1,8 @@
 #!/usr/bin/env bash
 
+# this script does that:
+# https://coolestguidesontheplanet.com/get-apache-mysql-php-phpmyadmin-working-osx-10-10-yosemite/
+
 # store $USER because it could be ROOT after sudo
 ME=$USER;
 
