@@ -9,12 +9,9 @@ sudo -v
 # Keep-alive: update existing `sudo` time stamp until `.macos` has finished
 while true; do sudo -n true; sleep 60; kill -0 "$$" || exit; done 2>/dev/null &
 
-
 # Start OSX apache
 sudo apachectl start
 mkdir ~/Sites
-
-# whoami
 
 # create new bash profile
 sudo cat >/etc/apache2/users/$ME.conf <<EOF
@@ -42,8 +39,6 @@ EOM
 # set for delimiter to new line and saves the old delimiter
 IFSBack="$IFS"
 IFS=$"\n"
-...
-IFS="$OLDIFS"
 
 # uncomments lines in httpd.conf
 echo "Configure apatche:"
@@ -55,16 +50,17 @@ done;
 directive='Include /private/etc/apache2/users/*.conf';
 sudo sed -i "s|^#$directive|$directive|g" /etc/apache2/extra/httpd-userdir.conf;
 
-unset directive;
-unset directives;
 
 # set IFS back to what it was
 IFS="$IFSBack"
-unset IFSBack
 
+unset directive;
+unset directives;
+unset IFSBack
 unset ME
 
 # restart apatche
 sudo apachectl restart;
 
+# open your user directory in the browser
 open http://localhost/~$USER/
