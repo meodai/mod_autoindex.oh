@@ -14,6 +14,9 @@ while true; do sudo -n true; sleep 60; kill -0 "$$" || exit; done 2>/dev/null &
 
 # Start OSX apache
 sudo apachectl start
+
+# autoload apache on OSX bootup
+sudo launchctl load -w /System/Library/LaunchDaemons/org.apache.httpd.plist
 mkdir ~/Sites
 
 # create new bash profile
@@ -47,7 +50,8 @@ IFS=$"\n"
 echo "Configure apatche:"
 for directive in directives;
 do
-  sudo sed -i "s|^#$directive|$directive|g" /etc/apache2/httpd.conf
+    echo "uncomments $directive in /etc/apache2/httpd.conf";
+    sudo sed -i "s|^#$directive|$directive|g" /etc/apache2/httpd.conf;
 done;
 
 directive='Include /private/etc/apache2/users/*.conf';
